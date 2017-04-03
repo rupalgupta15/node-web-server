@@ -64,6 +64,14 @@ app.get('/about',(req,res) => {
   });
 })
 
+app.get('/projects',(req,res) => {
+  //res.send('About Page');
+  res.render('projects.hbs',{
+    pageTitle : 'Portfolio Page'
+    //currentYear : new Date().getFullYear() //Js function to get current full year
+  });
+})
+
 // create new route for /bad to simulate what happens when a request fails; respond back json data with errorMessage property
 app.get('/bad',(req,res) => {
   res.send({
